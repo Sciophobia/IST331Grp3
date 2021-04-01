@@ -32,6 +32,14 @@ $(function(){
 			return false;
 		}
 		
+		if ($this.hasClass('clear')) {
+			var html = $write.html();
+			
+			$write.html(html.substr(0, html.length - 99));
+			return false;
+		}
+		
+		
 		// Special characters
 		if ($this.hasClass('symbol')) character = $('span:visible', $this).html();
 		if ($this.hasClass('space')) character = ' ';

@@ -16,7 +16,8 @@ padding: 5px;
 width: 671px;
 height: 200px;
 font: 1em/1.5 Verdana, Sans-Serif;
-background: #fff;
+color: #00ff00;
+background: black;
 border: 1px solid #f9f9f9;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
@@ -41,13 +42,18 @@ list-style: none;
         .capslock, .tab, .left-shift {
         clear: left;
         }
-            #keyboard .tab, #keyboard .delete {
+            #keyboard .tab {
             width: 70px;
             }
+			#keyboard .delete, #keyboard .clear {
+				background: #ffdf71;
+				width: 40px;
+			}
             #keyboard .capslock {
             width: 80px;
             }
             #keyboard .return {
+	        background: #c92d39;
             width: 77px;
             }
             #keyboard .left-shift {
@@ -63,8 +69,8 @@ list-style: none;
         text-transform: uppercase;
         }
         #keyboard .space {
-        clear: left;
-        width: 681px;
+        background: #ffdf71;
+        width: 300px;
         }
         .on {
         display: none;
