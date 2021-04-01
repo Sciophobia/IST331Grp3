@@ -45,6 +45,11 @@ list-style: none;
             #keyboard .tab {
             width: 70px;
             }
+
+            #keyboard .number {
+			background: #99d2f2;
+			}
+
 			#keyboard .delete, #keyboard .clear {
 				background: #ffdf71;
 				width: 40px;

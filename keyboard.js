@@ -17,6 +17,12 @@ $(function(){
 			return false;
 		}
 		
+		//numbers
+		
+		if ($this.hasClass('number')) {
+			var html = $write.html();
+		}
+		
 		// Caps lock
 		if ($this.hasClass('capslock')) {
 			$('.letter').toggleClass('uppercase');
