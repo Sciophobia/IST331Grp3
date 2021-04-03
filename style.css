@@ -8,7 +8,7 @@ background: #eee;
 }
 #container {
 margin: 100px auto;
-width: 520px;
+width: 500px;
 }
 #write {
 margin: 0 0 5px;
@@ -59,7 +59,7 @@ list-style: none;
             }
             #keyboard .return {
 	        background: #c92d39;
-            width: 77px;
+            width: 80px;
             }
             #keyboard .left-shift {
             width: 95px;
