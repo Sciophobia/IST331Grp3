@@ -23,6 +23,10 @@ $(function(){
 			var html = $write.html();
 		}
 		
+		if ($this.hasClass('special')) {
+			var html = $write.html();
+		}
+		
 		// Caps lock
 		if ($this.hasClass('capslock')) {
 			$('.letter').toggleClass('uppercase');

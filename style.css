@@ -49,6 +49,10 @@ list-style: none;
             #keyboard .number {
 			background: #99d2f2;
 			}
+			
+			#keyboard .special {
+				background: #7ab648;
+			}
 
 			#keyboard .delete, #keyboard .clear {
 				background: #ffdf71;
