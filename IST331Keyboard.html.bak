@@ -1,45 +1,47 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
- 
-
-        <link rel="stylesheet" type="text/css" href="style.css" />
+     
+    <title>Online Keyboard</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
-<style>
-#container {
-    width: 400px;
-    height: 400px;
-    position: relative;
-    /* [disabled]background: black; */
-}
-#animate {
-  width: 20px;
-  height: 10px;
-  position: absolute;
-  background: green;
-}
-</style>
 <body>
-
-<h2>Standard Terminal Automation Replacement System Simulator V0.01a</h2>
-
-<div id="container" style="float: left">
-<div id="animate"></div>
-
-</div>
-
-
-<div id="container" style="left: 0px; top: 0px; width: 482px; height: 416px; float: right">
-    <textarea id="write" style="width: 461px; height: 81px"></textarea>
+ 
+<div id="container">
+    <textarea id="write" rows="6" cols="40"></textarea>
     <ul id="keyboard">
 		<li class="clear">Clear</li>
 		<li class="delete lastitem">Delete</li>
 		<li class="space">&nbsp;</li>
 		<li class="return lastitem">Enter</li>
 		
-		<li class="symbol"><span class="off">.</span><span class="on">&gt;</span></li>
+		<li class="special">INT</li>
+		<li class="special">RPOS</li>
+		<li class="special">SUSP</li>
+		<li class="special">TERMCTRL</li>
+		<li class="special">HNDOFF</li>
+		<li class="special">DATA</li>
+		<li class="special">MULT</li>
+		<li class="special">F8</li>
+		<li class="letter">/_\</li>
+		<li class="letter">.</li>
+		
+		<!-- Supposed to be a space here -->
+		
+		<li class="special">F9</li>
+		<li class="special">F10</li>
+		<li class="special">F11</li>
+		<li class="special">F12</li>
+		<li class="special">F13</li>
+		<li class="special">F14</li>
+		<li class="special">TGT</li>
+		<li class="special">F16</li>
+		<li class="letter">+</li>
+		<li class="letter">/</li>
+		
+		<!-- Supposed to be a space here -->
 		
 		<li class="letter">A</li>
 		<li class="letter">B</li>
@@ -85,33 +87,12 @@
         <li class="letter">X</li>
         <li class="letter">Y</li>
         <li class="letter">Z</li>
+        <li class="letter">*</li>
+        <li class="letter"></li>
+        <li class="letter"></li>
         <li class="number">0</li>
-
-
-        <li class="symbol"><span class="off">-</span><span class="on">_</span></li>
-        <li class="symbol"><span class="off">=</span><span class="on">+</span></li>
-        
-        <li class="symbol"><span class="off">[</span><span class="on">{</span></li>
-        <li class="symbol"><span class="off">]</span><span class="on">}</span></li>
-        <li class="symbol lastitem"><span class="off">\</span><span class="on">|</span></li>
-        
-        
-          
-        
-        
-
-        <li class="symbol"><span class="off">;</span><span class="on">:</span></li>
-        <li class="symbol"><span class="off">'</span><span class="on">&quot;</span></li>
-        
-
-
-        
-        
-        
-        
-        <li class="symbol"><span class="off">,</span><span class="on">&lt;</span></li>
-        
-        <li class="symbol"><span class="off">/</span><span class="on">?</span></li>
+        <li class="letter"></li>
+   
         
     </ul>
 </div>
@@ -119,5 +100,4 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 <script type="text/javascript" src="keyboard.js"></script>
 </body>
-
 </html>
