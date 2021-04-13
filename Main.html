@@ -2,43 +2,45 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <html>
 <head>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"
+	type=""></script>
 <link rel="stylesheet" type="text/css" href="./style.css" />
-<script src="./index.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script src="./index.js" type=""></script>
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 <script type="text/javascript" src="keyboard.js"></script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <style type="text/css">
-      /* Always set the map height explicitly to define the size of the div
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"
+	type=""></script>
+<style type="text/css">
+/* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-      #map {
-        height: 100%;
-      }
+#map {
+	height: 100%;
+}
 
-      /* Optional: Makes the sample page fill the window. */
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
+/* Optional: Makes the sample page fill the window. */
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+</style>
 </head>
-<style>
-
+<style type="">
 #container {
+	width: 400px;
+	height: 400px;
+	position: relative;
+	/* [disabled]background: black; */
+}
 
-    width: 400px;
-    height: 400px;
-    position: relative;
-    /* [disabled]background: black; */
-}
 #animate {
-  width: 20px;
-  height: 10px;
-  position: absolute;
-  background: green;
+	width: 20px;
+	height: 10px;
+	position: absolute;
+	background: green;
 }
+
 .newStyle1 {
 	background-color: #000000;
 	font-family: Arial;
@@ -51,115 +53,135 @@
 </style>
 
 
-<body style="background-color: #000000; background-image: url('wallpaper.jpg');">
+<body
+	style="background-color: #000000; background-image: url('wallpaper.jpg');">
 
-<h2 style="color: #FFFFFF">Standard Terminal Automation Replacement System Simulator V0.01a</h2>
+	<h2 style="color: #FFFFFF">Standard Terminal Automation
+		Replacement System Simulator V0.01a</h2>
 
-    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+	<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
 
-  
-<div id="layer1" class="auto-style1" style="position: absolute; left: 629px; top: 62px; width: 478px; height: 443px; z-index: 1; float: right">
-    <ul id="keyboard0">
-		<li class="symbol">
-		<div>
-			<textarea id="write" name="S1" style="height: 40px; width: 464px; font-size: 12px; font-family: Arial;"></textarea></div>
-&nbsp;<ul id="keyboard">
-		<li class="clear">Clear</li>
-		<li class="delete lastitem" style="font-size: 12px">BACK<br>SPACE</li>
-		<li class="space">&nbsp;</li>
-		<li class="return lastitem">Enter</li>
-		
-		<li class="special">INT<br>CNTL</li>
-		<li class="special">TRK<br>RPOS</li>
-		<li class="special">TRK<br>SUSP</li>
-		<li class="special">TERM <br>CTRL</li>
-		<li class="special">HND<br>OFF</li>
-		<li class="special">FLT<br>DATA</li>
-		<li class="special" style="font-size: 12px">MULT<br>FUNCT</li>
-		<li class="special">F8</li>
-		<li class="letter">/_\</li>
-		<li class="letter">.</li>
-		
-		<!-- Supposed to be a space here -->
-		
-		<li class="special">F9</li>
-		<li class="special">F10</li>
-		<li class="special">F11</li>
-		<li class="special">F12</li>
-		<li class="special">F13</li>
-		<li class="special">F14</li>
-		<li class="special">TGT<br>GEN</li>
-		<li class="special">F16</li>
-		<li class="letter">+</li>
-		<li class="letter">/</li>
-		
-		<!-- Supposed to be a space here -->
-		
-		<li class="letter">A</li>
-		<li class="letter">B</li>
-		<li class="letter">C</li>
-		<li class="letter">D</li>
-		<li class="letter">E</li>
-		<li class="letter">F</li>
-        <li class="letter">G</li>
-        <li class="number">1</li>
-        <li class="number">2</li>
-        <li class="number">3</li>
-		
-		<!-- Supposed to be a space here -->
-		
-		<li class="letter">H</li>
-		<li class="letter">I</li>
-        <li class="letter">J</li>
-        <li class="letter">K</li>
-        <li class="letter">L</li>
-        <li class="letter">M</li>
-        <li class="letter">N</li>
-        <li class="number">4</li>
-        <li class="number">5</li>
-        <li class="number">6</li>
 
-        <!-- Supposed to be a space here -->
+	<div id="layer1" class="auto-style1"
+		style="position: absolute; left: 629px; top: 62px; width: 478px; height: 443px; z-index: 1; float: right">
+		<ul id="keyboard0">
+			<li class="symbol">
+				<div>
+					<textarea id="write" name="S1"
+						style="height: 40px; width: 464px; font-size: 12px; font-family: Arial;"
+						cols="" rows=""></textarea>
+				</div> &nbsp;
+				<ul id="keyboard">
+					<li class="clear">Clear</li>
+					<li class="delete lastitem" style="font-size: 12px">BACK<br />SPACE
+					</li>
+					<li class="space">
+						&nbsp;
+					</li>
+					<li class="return lastitem">Enter</li>
 
-        <li class="letter">O</li>
-        <li class="letter">P</li>
-        <li class="letter">Q</li>
-        <li class="letter">R</li>
-        <li class="letter">S</li>
-        <li class="letter">T</li>
-        <li class="letter">U</li>
-        <li class="number">7</li>
-        <li class="number">8</li>
-        <li class="number">9</li>
+					<li class="special">INT<br />CNTL
+					</li>
+					<li class="special">TRK<br />RPOS
+					</li>
+					<li class="special">TRK<br />SUSP
+					</li>
+					<li class="special">TERM <br />CTRL
+					</li>
+					<li class="special">HND<br />OFF
+					</li>
+					<li class="special">FLT<br />DATA
+					</li>
+					<li class="special" style="font-size: 12px">MULT<br />FUNCT
+					</li>
+					<li class="special">F8</li>
+					<li class="letter">/_\</li>
+					<li class="letter">.</li>
 
-        <!-- Supposed to be a space here -->
+					<!-- Supposed to be a space here -->
 
-        <li class="letter">V</li>
-        <li class="letter">W</li>
-        <li class="letter">X</li>
-        <li class="letter">Y</li>
-        <li class="letter">Z</li>
-        <li class="letter">*</li>
-        <li class="letter"></li>
-        <li class="letter"></li>
-        <li class="number">0</li>
-        <li class="letter"></li>
-   
-        
+					<li class="special">F9</li>
+					<li class="special">F10</li>
+					<li class="special">F11</li>
+					<li class="special">F12</li>
+					<li class="special">F13</li>
+					<li class="special">F14</li>
+					<li class="special">TGT<br />GEN
+					</li>
+					<li class="special">F16</li>
+					<li class="letter">+</li>
+					<li class="letter">/</li>
 
-   
-        
-    </ul>
-		<span class="on">+</span></li>
-        
-    </ul>
-</div>
-<p>&nbsp;</p>
- 
-   
-<p>
-&nbsp;</p>
-<script>
+					<!-- Supposed to be a space here -->
+
+					<li class="letter">A</li>
+					<li class="letter">B</li>
+					<li class="letter">C</li>
+					<li class="letter">D</li>
+					<li class="letter">E</li>
+					<li class="letter">F</li>
+					<li class="letter">G</li>
+					<li class="number">1</li>
+					<li class="number">2</li>
+					<li class="number">3</li>
+
+					<!-- Supposed to be a space here -->
+
+					<li class="letter">H</li>
+					<li class="letter">I</li>
+					<li class="letter">J</li>
+					<li class="letter">K</li>
+					<li class="letter">L</li>
+					<li class="letter">M</li>
+					<li class="letter">N</li>
+					<li class="number">4</li>
+					<li class="number">5</li>
+					<li class="number">6</li>
+
+					<!-- Supposed to be a space here -->
+
+					<li class="letter">O</li>
+					<li class="letter">P</li>
+					<li class="letter">Q</li>
+					<li class="letter">R</li>
+					<li class="letter">S</li>
+					<li class="letter">T</li>
+					<li class="letter">U</li>
+					<li class="number">7</li>
+					<li class="number">8</li>
+					<li class="number">9</li>
+
+					<!-- Supposed to be a space here -->
+
+					<li class="letter">V</li>
+					<li class="letter">W</li>
+					<li class="letter">X</li>
+					<li class="letter">Y</li>
+					<li class="letter">Z</li>
+					<li class="letter">*</li>
+					<li class="letter"></li>
+					<li class="letter"></li>
+					<li class="number">0</li>
+					<li class="letter"></li>
+
+
+
+
+
+				</ul> <span class="on">+</span>
+			</li>
+
+		</ul>
+	</div>
+	<p>
+		&nbsp;
+	</p>
+
+
+	<p>
+		&nbsp;
+	</p>
+	<script type="">
       "use strict";
 
       function initMap() {
@@ -218,16 +240,15 @@
     </script>
 
 
-    <div id="map" style="height: 571px; width: 619px"></div>
+	<div id="map" style="height: 571px; width: 619px"></div>
 
-    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-  
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
-      async
-    ></script>
-     
-      <script>
+	<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&amp;callback=initMap&amp;libraries=&amp;v=weekly"
+		async="async" type=""></script>
+
+	<script type="">
       function initMap() {
     	  // Styles a map in night mode.
     	  const map = new google.maps.Map(document.getElementById("map"), {
@@ -454,7 +475,7 @@
     	    		],
     	  });
     	}</script>
-   
+
 </body>
 
 </html>
