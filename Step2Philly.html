@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://libs.cartocdn.com/carto-vl/v1.4.4/carto-vl.min.js"></script>
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js"></script>
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css" rel="stylesheet" />
+
+    <link href="https://carto.com/developers/carto-vl/v1.4.4/examples/maps/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="map"></div>
+    <script>
+        // Add basemap and set properties
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: carto.basemaps.darkmatter,
+            center: [-75.2437,39.87], //lat: 39.87, lng: -75.2437
+            zoom: 11,
+            scrollZoom: false
+        });
+
+        const nav = new mapboxgl.NavigationControl();
+        map.addControl(nav, 'top-left');
+        map.addControl(new mapboxgl.FullscreenControl(), 'top-left');
+
+        //** CARTO VL functionality begins here **//
+
+        // Autenticate the client
+        carto.setDefaultAuth({
+            username: 'cartovl',
+            apiKey: 'default_public'
+        });
+        
+        const offices = {
+                "type": "FeatureCollection",
+                "features": [
+                    {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [-75.2437,39.87]
+                        },
+                        "properties": {
+                            "address": "Philadelpha, Pennsylvania"
+                        }
+                    };
+
+        // Define source
+       const officesSource = new carto.source.GeoJSON(offices);
+        const officesViz = new carto.Viz(`
+            color: red
+            width: 20
+        `);
+        const officesLayer = new carto.Layer('offices', officesSource, officesViz);
+        officesLayer.addTo(map);
+
+        // Add the layer to the map
+        layer.addTo(map);
+    </script>
+</body>
+
+</html>
