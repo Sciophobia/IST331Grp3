@@ -33,6 +33,7 @@ html, body {
 </style>
 </head>
 <style type="">
+
 #container {
 	width: 400px;
 	height: 400px;
@@ -60,7 +61,7 @@ html, body {
 
 
 <body
-	style="background-color: #000000; background-image: url('wallpaper.jpg');">
+	style="background-color: #000000; background-image: url('wallpaper.jpg'); margin-bottom: 0;">
 
 	<h2 style="color: #FFFFFF">Standard Terminal Automation
 		Replacement System Simulator V0.01a</h2>
@@ -187,301 +188,43 @@ html, body {
 	<p>
 		&nbsp;
 	</p>
-	<script type="">
-      "use strict";
-
-      function initMap() {
-        var map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 18,
-          center: {
-            lat: 39.87,
-            lng: -75.2437,
-          },
+	<    <div id="map" style="width: 621px; height: 451px"></div>
+    <script>
+        // Add basemap and set properties
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: carto.basemaps.darkmatter,
+            center: [-75.2437,39.87], //lat: 39.87, lng: -75.2437
+            zoom: 11,
+            scrollZoom: false
         });
-        var bounds = {
-          17: [
-            [20969, 20970],
-            [50657, 50658],
-          ],
-          18: [
-            [41939, 41940],
-            [101315, 101317],
-          ],
-          19: [
-            [83878, 83881],
-            [202631, 202634],
-          ],
-          20: [
-            [167757, 167763],
-            [405263, 405269],
-          ],
-        };
-        var imageMapType = new google.maps.ImageMapType({
-          getTileUrl: function getTileUrl(coord, zoom) {
-            if (
-              zoom < 17 ||
-              zoom > 20 ||
-              bounds[zoom][0][0] > coord.x ||
-              coord.x > bounds[zoom][0][1] ||
-              bounds[zoom][1][0] > coord.y ||
-              coord.y > bounds[zoom][1][1]
-            ) {
-              return "";
-            }
 
-            return [
-              "https://www.gstatic.com/io2010maps/tiles/5/L2_",
-              zoom,
-              "_",
-              coord.x,
-              "_",
-              coord.y,
-              ".png",
-            ].join("");
-          },
-          tileSize: new google.maps.Size(256, 256),
+        const nav = new mapboxgl.NavigationControl();
+        map.addControl(nav, 'top-left');
+        map.addControl(new mapboxgl.FullscreenControl(), 'top-left');
+
+        //** CARTO VL functionality begins here **//
+
+        // Autenticate the client
+        carto.setDefaultAuth({
+            username: 'cartovl',
+            apiKey: 'default_public'
         });
-        map.overlayMapTypes.push(imageMapType);
-      }
+
+        // Define source
+        const source = new carto.source.Dataset('bird_journey');
+
+        // Define and style Viz object
+        const viz = new carto.Viz(`
+            filter: animation($date_time, 10, fade(1, 1))
+        `);
+
+        // Define map layer
+        const layer = new carto.Layer('layer', source, viz);
+
+        // Add the layer to the map
+        layer.addTo(map);
     </script>
-
-
-	<div id="map" style="height: 571px; width: 619px"></div>
-
-	<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-
-	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&amp;callback=initMap&amp;libraries=&amp;v=weekly"
-		async="async" type=""></script>
-
-	<script type="">
-      function initMap() {
-    	  // Styles a map in night mode.
-    	  const map = new google.maps.Map(document.getElementById("map"), {
-    	    center: {  lat: 39.87,
-            lng: -75.2437 },
-    	    zoom: 12,
-    	    styles: [
-    	    	  {
-    	    		    "elementType": "geometry",
-    	    		    "stylers": [
-    	    		      {
-    	    		        "color": "#242f3e"
-    	    		      }
-    	    		    ]
-    	    		  },
-    	    		  {
-    	    		    "elementType": "labels.text.fill",
-    	    		    "stylers": [
-    	    		      {
-    	    		        "color": "#746855"
-    	    		      }
-    	    		    ]
-    	    		  },
-    	    		  {
-    	    		    "elementType": "labels.text.stroke",
-    	    		    "stylers": [
-    	    		      {
-    	    		        "color": "#242f3e"
-    	    		      }
-    	    		    ]
-    	    		  },
-    	    		  {
-    	    		    "featureType": "administrative.locality",
-    	    		    "elementType": "labels.text.fill",
-    	    		    "stylers": [
-    	    		      {
-    	    		        "color": "#d59563"
-    	    		      }
-    	    		    ]
-    	    		  },
-    	    		  {
-    	    		    "featureType": "landscape.natural",
-    	    		    "stylers": [
-    	    		      {
-    	    		        "visibility": "on"
-    	    		      }
-    	    		    ]
-    	    		  },
-    	    		  {
-    	    		    "featureType": "poi",
-    	    		    "elementType": "labels.text",
-    	    		    "stylers": [
-    	    		      {
-    	    		        "visibility": "off"
-    	    		      }
-    	    		    ]
-    	    		  },
-    	    		  {
-    	    		    "featureType": "poi",
-    	    		    "elementType": "labels.text.fill",
-    	    		    "stylers": [
-    	    		      {
-    	    		        "color": "#d59563"
-    	    		      }
-    	    		    ]
-    	    		  },
-    	    		  {
-    	    		    "featureType": "poi.business",
-    	    		    "stylers": [
-    	    		      {
-    	    		        "visibility": "off"
-    	    		      }
-    	    		    ]
-    	    		  },
-    	    		  {
-    	    		    "featureType": "poi.park",
-    	    		    "elementType": "geometry",
-    	    		    "stylers": [
-    	    		      {
-    	    		        "color": "#263c3f"
-    	    		      }
-    	    		    ]
-    	    		  },
-    	    		  {
-    	    		    "featureType": "poi.park",
-    	    		    "elementType": "labels.text.fill",
-    	    		    "stylers": [
-    	    		      {
-    	    		        "color": "#6b9a76"
-    	    		      }
-    	    		    ]
-    	    		  },
-    	    		  {
-    	    		    "featureType": "road",
-    	    		    "stylers": [
-    	    		      {
-    	    		        "visibility": "off"
-    	    		      }
-    	    		    ]
-    	    		  },
-    	    		  {
-    	    		    "featureType": "road",
-    	    		    "elementType": "geometry",
-    	    		    "stylers": [
-    	    		      {
-    	    		        "color": "#38414e"
-    	    		      }
-    	    		    ]
-    	    		  },
-    	    		  {
-    	    		    "featureType": "road",
-    	    		    "elementType": "geometry.stroke",
-    	    		    "stylers": [
-    	    		      {
-    	    		        "color": "#212a37"
-    	    		      }
-    	    		    ]
-    	    		  },
-    	    		  {
-    	    		    "featureType": "road",
-    	    		    "elementType": "labels.icon",
-    	    		    "stylers": [
-    	    		      {
-    	    		        "visibility": "off"
-    	    		      }
-    	    		    ]
-    	    		  },
-    	    		  {
-    	    		    "featureType": "road",
-    	    		    "elementType": "labels.text.fill",
-    	    		    "stylers": [
-    	    		      {
-    	    		        "color": "#9ca5b3"
-    	    		      }
-    	    		    ]
-    	    		  },
-    	    		  {
-    	    		    "featureType": "road.highway",
-    	    		    "elementType": "geometry",
-    	    		    "stylers": [
-    	    		      {
-    	    		        "color": "#746855"
-    	    		      }
-    	    		    ]
-    	    		  },
-    	    		  {
-    	    		    "featureType": "road.highway",
-    	    		    "elementType": "geometry.stroke",
-    	    		    "stylers": [
-    	    		      {
-    	    		        "color": "#1f2835"
-    	    		      }
-    	    		    ]
-    	    		  },
-    	    		  {
-    	    		    "featureType": "road.highway",
-    	    		    "elementType": "labels.text.fill",
-    	    		    "stylers": [
-    	    		      {
-    	    		        "color": "#f3d19c"
-    	    		      }
-    	    		    ]
-    	    		  },
-    	    		  {
-    	    		    "featureType": "transit",
-    	    		    "stylers": [
-    	    		      {
-    	    		        "visibility": "off"
-    	    		      }
-    	    		    ]
-    	    		  },
-    	    		  {
-    	    		    "featureType": "transit",
-    	    		    "elementType": "geometry",
-    	    		    "stylers": [
-    	    		      {
-    	    		        "color": "#2f3948"
-    	    		      }
-    	    		    ]
-    	    		  },
-    	    		  {
-    	    		    "featureType": "transit.station",
-    	    		    "elementType": "labels.text.fill",
-    	    		    "stylers": [
-    	    		      {
-    	    		        "color": "#d59563"
-    	    		      }
-    	    		    ]
-    	    		  },
-    	    		  {
-    	    		    "featureType": "transit.station.airport",
-    	    		    "stylers": [
-    	    		      {
-    	    		        "visibility": "on"
-    	    		      }
-    	    		    ]
-    	    		  },
-    	    		  {
-    	    		    "featureType": "water",
-    	    		    "elementType": "geometry",
-    	    		    "stylers": [
-    	    		      {
-    	    		        "color": "#17263c"
-    	    		      }
-    	    		    ]
-    	    		  },
-    	    		  {
-    	    		    "featureType": "water",
-    	    		    "elementType": "labels.text.fill",
-    	    		    "stylers": [
-    	    		      {
-    	    		        "color": "#515c6d"
-    	    		      }
-    	    		    ]
-    	    		  },
-    	    		  {
-    	    		    "featureType": "water",
-    	    		    "elementType": "labels.text.stroke",
-    	    		    "stylers": [
-    	    		      {
-    	    		        "color": "#17263c"
-    	    		      }
-    	    		    ]
-    	    		  }
-    	    		],
-    	  });
-    	}</script>
 
 </body>
 
