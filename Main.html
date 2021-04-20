@@ -34,6 +34,7 @@ html, body {
 </head>
 <style type="">
 
+
 #container {
 	width: 400px;
 	height: 400px;
@@ -41,7 +42,7 @@ html, body {
 	/* [disabled]background: black; */
 }
 
-#animate {
+#myanimation {
 	width: 20px;
 	height: 10px;
 	position: absolute;
@@ -102,7 +103,7 @@ html, body {
 					<li class="special" style="font-size: 12px">MULT<br />FUNCT
 					</li>
 					<li class="special">F8</li>
-					<li class="letter">&Delta;</li>
+					<li class="letter">/_\</li>
 					<li class="letter">.</li>
 
 					<!-- Supposed to be a space here -->
@@ -188,7 +189,12 @@ html, body {
 	<p>
 		&nbsp;
 	</p>
-	 <div id="map" style="width: 621px; height: 451px"></div>
+  
+	<div id="map" style="width: 621px; height: 451px">
+		<div id="layer2" style="position: absolute; width: 619px; height: 448px; z-index: 2; left: 0px; top: 87px">
+		</div>
+	</div>
+	<div id="myanimation:"></div>
     <script>
         // Add basemap and set properties
         const map = new mapboxgl.Map({
