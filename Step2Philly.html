@@ -43,7 +43,10 @@
                             "coordinates": [-75.2437,39.87]
                         },
                         "properties": {
-                            "address": "Philadelpha, Pennsylvania"
+                            "address": "Philadelpha, Pennsylvania",
+                                "speed": 50
+                               , "direction": "south"
+                                
                         }
                     }
                 ]
@@ -54,12 +57,10 @@
         const officesViz = new carto.Viz(`
             color: red
             width: 20
-            //filter: animation($date_time, 30, fade(1, 1))
-            filter: animation($date_time, 30, fade(0, 0.5))
         `);
         const officesLayer = new carto.Layer('offices', officesSource, officesViz);
         officesLayer.addTo(map);
-       
+
         // Add the layer to the map
         layer.addTo(map);
     </script>
