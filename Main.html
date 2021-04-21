@@ -74,6 +74,11 @@ html, body {
 		Replacement System Simulator V0.01a</h2>
 <p><button onclick="myMove()">Play From Beginning</button></p> 
 	
+  <div id="layer2" style="position: absolute; width: 202px; height: 238px; z-index: 2; left: 700px; top: 61px; color: #FFFFFF">
+		Animation Controls<select name="Select2" style="width: 184px">
+		<option>Play</option>
+		<option onclick="myMove()">Play From Beginning</option>
+		</select></div>
   
 <script>
 var id = null;
@@ -99,7 +104,7 @@ function myMove() {
 
 
 	<div id="layer1" class="auto-style1"
-		style="position: absolute; left: 629px; top: 62px; width: 478px; height: 443px; z-index: 1; float: right">
+		style="position: absolute; left: 629px; top: 170px; width: 478px; height: 443px; z-index: 1; float: right">
 		<ul id="keyboard0">
 			<li class="symbol">
 				<div>
@@ -260,10 +265,7 @@ function myMove() {
 
 	<form method="post">
 	</form>
-	<div id="layer2" style="position: absolute; width: 202px; height: 238px; z-index: 2; left: 1162px; top: 61px; color: #FFFFFF">
-		Animation Controls<select name="Select2" style="width: 184px">
-		<option>Play</option>
-		</select></div>
+	
 
 </body>
 
