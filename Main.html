@@ -73,24 +73,35 @@ html, body {
 	<h2 style="color: #FFFFFF">Standard Terminal Automation
 		Replacement System Simulator V0.01a</h2>
 <p><button onclick="myMove()">Play From Beginning</button></p> 
-	
-  
+
 <script>
+
 var id = null;
+function wait(ms){
+	   var start = new Date().getTime();
+	   var end = start;
+	   while(end < start + ms) {
+	     end = new Date().getTime();
+	  }
+	}
 function myMove() {
   var elem = document.getElementById("animate");   
-  var pos = 0;
+  var pos = 80; //where element starts
   clearInterval(id);
   id = setInterval(frame, 5);
   function frame() {
-    if (pos == 350) {
+    if (pos == 450) { //where element heads to
       clearInterval(id);
+      document.getElementById('animate').style.display='none'; //hides element once animation is completed
     } else {
-      pos++; 
+    	 
+      pos+=10; 
       elem.style.top = pos + "px"; 
       elem.style.left = pos + "px"; 
+      wait(1000);
     }
   }
+  
 }
 </script>
 
