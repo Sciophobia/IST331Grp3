@@ -116,7 +116,12 @@ html, body {
 
 	<h2 style="color: #FFFFFF">Standard Terminal Automation
 		Replacement System Simulator V0.01a</h2>
+
+<p><button onclick="myMove()">Play From Beginning</button></p> 
+<p><button onclick="myMove2()">Play 2</button></p>
+
 <p><button onclick="myMove(); myMove2();">Play From Beginning</button></p> 
+
 
 <script>
  
@@ -136,7 +141,7 @@ function myMove() {
   function frame() {
     if (pos == 470) { //where element heads to
       clearInterval(id);
-      document.getElementById('animate').style.display='none';  //hides element once animation is completed: https://www.tutorialspoint.com/how-to-hide-show-html-elements-in-javascript
+      document.getElementById('animate').style.display='none';  
     } else {
     	 
       pos+=10; 
@@ -166,6 +171,27 @@ function myMove2() {
   }
   
 }
+
+function myMove2() {
+	  var elem = document.getElementById("animate2");   
+	  var pos = 100; //where element starts
+	  clearInterval(id);
+	  id = setInterval(frame, 5);
+	  function frame() {
+	    if (pos == 350) { //where element heads to
+	      clearInterval(id);
+	      document.getElementById('animate2').style.display='none';  
+	    } else {
+	    	 
+	      pos+=10; 
+	      elem.style.middle = pos + "px"; 
+	      elem.style.left = pos + "px"; 
+	      wait(1000);
+	    }
+	  }
+	  
+	}
+
 </script>
 
 
@@ -173,7 +199,7 @@ function myMove2() {
 
 
 	<div id="layer1" class="auto-style1"
-		style="position: absolute; left: 629px; top: 62px; width: 478px; height: 443px; z-index: 1; float: right">
+		style="position: absolute; left: 629px; top: 130px; width: 478px; height: 443px; z-index: 1; float: right">
 		<ul id="keyboard0">
 			<li class="symbol">
 				<div>
@@ -308,7 +334,11 @@ function myMove2() {
 	<div id="map" style="width: 642px; height: 439px">
 	</div>
 
+
+	<img src="FlightTrip.jpg" style=”width:600px;height:150px;top:400px;">
+
 	<img src="FlightTrip.jpg" style=”width:600px; height="97" width="652">
+
 	
 		
 	
@@ -352,7 +382,7 @@ function myMove2() {
 
 	<form method="post">
 	</form>
-	<div id="layer2" style="position: absolute; width: 202px; height: 238px; z-index: 2; left: 1162px; top: 61px; color: #FFFFFF">
+	<div id="layer2" style="position: absolute; width: 202px; height: 238px; z-index: 2; left: 670px; top: 61px; color: #FFFFFF">
 		Animation Controls<select name="Select2" style="width: 184px">
 		<option>Play</option>
 		</select></div>
