@@ -99,7 +99,7 @@ function wait(ms){
 	  }
 	}
 
-
+//NOTE: Speed (variable shown right above refreshInterval() function modifies the speed of the animation)
 function myMove() {
   var elem = document.getElementById("animate");   
   var pos = 76; //where element starts
@@ -114,7 +114,7 @@ function myMove() {
       pos+=10; 
       elem.style.top = pos + "px"; 
       elem.style.left = pos + "px"; 
-      wait(1500);
+    
     }  }
   
 }
@@ -137,6 +137,27 @@ function myMove2() { //change
      
       elem.style.left = pos2 + "px"; 
       
+    }
+  }
+  
+}
+var id3 =null;
+var speed = 1500;
+function refreshInterval() { //change 
+ 
+  var pos3 = 76; //where element starts
+  var counter =0;
+  var destinationclock = 19;// (goes by each interval it moves, 19 moves = 19 spots over in whichever direction)
+  clearInterval(id3);//change 
+  id3= setInterval(frame, 5); //change 
+  function frame() {
+    if (pos3 == 1666) { //where element heads to
+      clearInterval(id3); //change 
+    
+    } else {
+   
+      pos3+=10;
+   	  wait(speed);
     }
   }
   
@@ -327,7 +348,7 @@ function myMove2() { //change
 	<div id="layer2" style="position: absolute; width: 202px; height: 238px; z-index: 2; left: 1162px; top: 61px; color: #FFFFFF">
 		Animation Controls<select name="Select2" style="width: 184px">
 		<option>Play</option>
-		</select><button onclick="myMove(); myMove2();">Play From Beginning</button></div>
+		</select><button onclick="myMove(); myMove2(); refreshInterval();">Play From Beginning</button></div>
 
 </body>
 
