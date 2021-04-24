@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <html>
 <head>
@@ -98,13 +98,15 @@ function wait(ms){
 	     end = new Date().getTime();
 	  }
 	}
+
+
 function myMove() {
   var elem = document.getElementById("animate");   
   var pos = 76; //where element starts
   clearInterval(id);
   id = setInterval(frame, 5);
   function frame() {
-    if (pos == 470) { //where element heads to
+    if (pos == 476) { //where element heads to
       clearInterval(id);
       document.getElementById('animate').style.display='none';  //hides element once animation is completed: https://www.tutorialspoint.com/how-to-hide-show-html-elements-in-javascript
     } else {
@@ -112,7 +114,7 @@ function myMove() {
       pos+=10; 
       elem.style.top = pos + "px"; 
       elem.style.left = pos + "px"; 
-      wait(1000);
+      wait(1500);
     }  }
   
 }
@@ -120,19 +122,21 @@ function myMove() {
 var id2=null;
 function myMove2() { //change 
   var elem = document.getElementById("animate2");  //change  
-  var pos = 76; //where element starts
+  var pos2 = 76; //where element starts
+  var counter =0;
+  var destinationclock = 19;// (goes by each interval it moves, 19 moves = 19 spots over in whichever direction)
   clearInterval(id2);//change 
   id2 = setInterval(frame, 5); //change 
   function frame() {
-    if (pos == 50) { //where element heads to
+    if (pos2 == 166) { //where element heads to
       clearInterval(id2); //change 
       document.getElementById('animate2').style.display='none';  //change. hides element once animation is completed: https://www.tutorialspoint.com/how-to-hide-show-html-elements-in-javascript
     } else {
+   
+      pos2+=10;
      
-      pos+=10;
-     
-      elem.style.left = pos + "px"; 
-      wait(1000);
+      elem.style.left = pos2 + "px"; 
+      
     }
   }
   
@@ -303,19 +307,19 @@ function myMove2() { //change
             apiKey: 'default_public'
         });
 
-        // Define source
-       // const source = new carto.source.Dataset('bird_journey');
+/*         // Define source
+        const source = new carto.source.Dataset('bird_journey');
 
         // Define and style Viz object
-       // const viz = new carto.Viz(`
-          //  filter: animation($date_time, 10, fade(1, 1))
-        // `);
+        const viz = new carto.Viz(`
+            filter: animation($date_time, 10, fade(1, 1))
+        `);
 
         // Define map layer
-       //  const layer = new carto.Layer('layer', source, viz);
+        const layer = new carto.Layer('layer', source, viz);
 
         // Add the layer to the map
-        // layer.addTo(map);
+        layer.addTo(map); */
     </script>
 
 	<form method="post">
