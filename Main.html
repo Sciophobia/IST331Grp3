@@ -33,15 +33,29 @@ html, body {
 .auto-style1 {
 	margin-left: 40px;
 }
-.auto-style2 {
-	margin-left: 18px;
-}
 .auto-style3 {
 	margin-left: 3px;
 }
 </style>
 </head>
 <style type="">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -80,7 +94,7 @@ html, body {
 #animate2 {
   width: 50px;
   height: 50px;
-  position: absolute;
+  position: relative;
   background-color: green;
 }
 
@@ -101,11 +115,15 @@ html, body {
 
 	<h2 style="color: #FFFFFF">Standard Terminal Automation
 		Replacement System Simulator V0.01a</h2>
+
 <p><button onclick="myMove()">Play From Beginning</button></p> 
 <p><button onclick="myMove2()">Play 2</button></p>
 
-<script>
+<p><button onclick="myMove(); myMove2();">Play From Beginning</button></p> 
 
+
+<script>
+ 
 var id = null;
 function wait(ms){
 	   var start = new Date().getTime();
@@ -127,6 +145,25 @@ function myMove() {
     	 
       pos+=10; 
       elem.style.top = pos + "px"; 
+      elem.style.left = pos + "px"; 
+      wait(1000);
+    }  }
+  
+}
+// z-index: 1; left: 50px; top: 280px; width: 11px; height: 12px;
+function myMove2() {
+  var elem = document.getElementById("animate2");   
+  var pos = 66; //where element starts
+  clearInterval(id);
+  id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 50) { //where element heads to
+      clearInterval(id);
+      document.getElementById('animate2').style.display='none';  //hides element once animation is completed: https://www.tutorialspoint.com/how-to-hide-show-html-elements-in-javascript
+    } else {
+    	 
+      pos+=10; 
+     
       elem.style.left = pos + "px"; 
       wait(1000);
     }
@@ -276,7 +313,7 @@ function myMove2() {
 	</p>
 
 
-  <div id ="animate" style="font: normal normal normal 100% serif; z-index: 1; left: 50px; top: 66px; width: 11px; height: 12px; text-align: right; color: #00FF00; text-decoration: blink;">
+  <div id ="animate" style="font: normal normal normal 100% serif; z-index: 1; left: 50px; top: 76px; width: 11px; height: 12px; text-align: right; color: #00FF00; text-decoration: blink;">
 	  <p class="auto-style3" style="width: 73px">N536SP*</p>
 	  <p class="auto-style3" style="width: 73px">033 11PF</p>
 	  <p class="auto-style3" style="width: 73px">ACY *B763</p>
@@ -288,7 +325,7 @@ function myMove2() {
 	  <p class="auto-style3" style="width: 73px">026 11PF</p>
 	  <p class="auto-style3" style="width: 73px">PHL *B762</p>
 	  
-	  <label id="Label1"></label>
+	  <label id="Label2"></label>
 	</div>
     
 
@@ -296,7 +333,11 @@ function myMove2() {
 	<div id="map" style="width: 642px; height: 439px">
 	</div>
 
+
 	<img src="FlightTrip.jpg" style=”width:600px;height:150px;top:400px;">
+
+	<img src="FlightTrip.jpg" style=”width:600px; height="97" width="652">
+
 	
 		
 	
