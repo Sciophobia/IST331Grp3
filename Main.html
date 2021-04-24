@@ -40,6 +40,10 @@ html, body {
 </head>
 <style type="">
 
+
+
+
+
 #container {
   width: 400px;
   height: 400px;
@@ -78,7 +82,7 @@ html, body {
 
 	<h2 style="color: #FFFFFF">Standard Terminal Automation
 		Replacement System Simulator V0.01a</h2>
-<p><button onclick="myMove(); myMove2();myMove(); myMove2()">Play From Beginning</button></p> 
+<p><button onclick="myMove(); myMove2();">Play From Beginning</button></p> 
 
 <script>
  
@@ -109,15 +113,16 @@ function myMove() {
   
 }
 // z-index: 1; left: 50px; top: 280px; width: 11px; height: 12px;
-function myMove2() {
-  var elem = document.getElementById("animate2");   
+var id2=null;
+function myMove2() { //change 
+  var elem = document.getElementById("animate2");  //change  
   var pos = 76; //where element starts
-  clearInterval(id);
-  id = setInterval(frame, 5);
+  clearInterval(id2);//change 
+  id2 = setInterval(frame, 5); //change 
   function frame() {
     if (pos == 50) { //where element heads to
-      clearInterval(id);
-      document.getElementById('animate2').style.display='none';  //hides element once animation is completed: https://www.tutorialspoint.com/how-to-hide-show-html-elements-in-javascript
+      clearInterval(id2); //change 
+      document.getElementById('animate2').style.display='none';  //change. hides element once animation is completed: https://www.tutorialspoint.com/how-to-hide-show-html-elements-in-javascript
     } else {
     	 
       pos+=10; 
@@ -271,7 +276,7 @@ function myMove2() {
 	</div>
 
 	<img src="FlightTrip.jpg" style=”width:600px; height="97" width="652">
-	<img src="FlightTrip2.png" style=”width:600px; height="97" width="652">
+<img src="FlightTrip2.jpg" style=”width:600px; height="97" width="652">
     <script>
         // Add basemap and set properties
         const map = new mapboxgl.Map({
