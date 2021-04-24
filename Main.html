@@ -44,6 +44,7 @@ html, body {
 
 
 
+
 #container {
   width: 400px;
   height: 400px;
@@ -82,7 +83,7 @@ html, body {
 
 	<h2 style="color: #FFFFFF">Standard Terminal Automation
 		Replacement System Simulator V0.01a</h2>
-<p><button onclick="myMove(); myMove2();">Play From Beginning</button></p> 
+<p>&nbsp;</p> 
 
 <script>
  
@@ -96,7 +97,7 @@ function wait(ms){
 	}
 function myMove() {
   var elem = document.getElementById("animate");   
-  var pos = 80; //where element starts
+  var pos = 76; //where element starts
   clearInterval(id);
   id = setInterval(frame, 5);
   function frame() {
@@ -319,7 +320,7 @@ function myMove2() { //change
 	<div id="layer2" style="position: absolute; width: 202px; height: 238px; z-index: 2; left: 1162px; top: 61px; color: #FFFFFF">
 		Animation Controls<select name="Select2" style="width: 184px">
 		<option>Play</option>
-		</select></div>
+		</select><button onclick="myMove(); myMove2();">Play From Beginning</button></div>
 
 </body>
 
