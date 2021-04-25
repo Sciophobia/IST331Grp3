@@ -6,6 +6,7 @@
 	type=""></script>
 <link rel="stylesheet" type="text/css" href="./style.css" />
 <script src="./index.js" type=""></script>
+<script src="./PHL_1.js" type=""></script>
 <script type="text/javascript"
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 <script type="text/javascript" src="keyboard.js"></script>
@@ -16,8 +17,10 @@
 
   <!-- Include Mapbox GL from the Mapbox CDN-->
   <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js"></script>
+
   <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css" rel="stylesheet" />
 <style type="text/css">
+M
 /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
 #map {
@@ -88,81 +91,7 @@ html, body {
 		Replacement System Simulator V0.01a</h2>
 <p>&nbsp;</p> 
 
-<script>
- 
-var id = null;
-function wait(ms){
-	   var start = new Date().getTime();
-	   var end = start;
-	   while(end < start + ms) {
-	     end = new Date().getTime();
-	  }
-	}
 
-//NOTE: Speed (variable shown right above refreshInterval() function modifies the speed of the animation)
-function myMove() {
-  var elem = document.getElementById("animate");   
-  var pos = 76; //where element starts
-  clearInterval(id);
-  id = setInterval(frame, 5);
-  function frame() {
-    if (pos == 476) { //where element heads to
-      clearInterval(id);
-      document.getElementById('animate').style.display='none';  //hides element once animation is completed: https://www.tutorialspoint.com/how-to-hide-show-html-elements-in-javascript
-    } else {
-    	 
-      pos+=10; 
-      elem.style.top = pos + "px"; 
-      elem.style.left = pos + "px"; 
-    
-    }  }
-  
-}
-// z-index: 1; left: 50px; top: 280px; width: 11px; height: 12px;
-var id2=null;
-function myMove2() { //change 
-  var elem = document.getElementById("animate2");  //change  
-  var pos2 = 76; //where element starts
-  var counter =0;
-  var destinationclock = 19;// (goes by each interval it moves, 19 moves = 19 spots over in whichever direction)
-  clearInterval(id2);//change 
-  id2 = setInterval(frame, 5); //change 
-  function frame() {
-    if (pos2 == 166) { //where element heads to
-      clearInterval(id2); //change 
-      document.getElementById('animate2').style.display='none';  //change. hides element once animation is completed: https://www.tutorialspoint.com/how-to-hide-show-html-elements-in-javascript
-    } else {
-   
-      pos2+=10;
-     
-      elem.style.left = pos2 + "px"; 
-      
-    }
-  }
-  
-}
-var id3 =null;
-var speed = 1500;
-function refreshInterval() { //change 
- 
-  var pos3 = 76; //where element starts
-  var counter =0;
-  var destinationclock = 19;// (goes by each interval it moves, 19 moves = 19 spots over in whichever direction)
-  clearInterval(id3);//change 
-  id3= setInterval(frame, 5); //change 
-  function frame() {
-    if (pos3 == 1666) { //where element heads to
-      clearInterval(id3); //change 
-    
-    } else {
-   
-      pos3+=10;
-   	  wait(speed);
-    }
-  }
-  
-}
-</script>
 
 
 	<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
@@ -329,15 +258,12 @@ function refreshInterval() { //change
 
 /*         // Define source
         const source = new carto.source.Dataset('bird_journey');
-
         // Define and style Viz object
         const viz = new carto.Viz(`
             filter: animation($date_time, 10, fade(1, 1))
         `);
-
         // Define map layer
         const layer = new carto.Layer('layer', source, viz);
-
         // Add the layer to the map
         layer.addTo(map); */
     </script>
@@ -350,7 +276,7 @@ function refreshInterval() { //change
 		<option>Stop</option>
 		<option>2x</option>
 		<option>4x</option>
-		</select><button onclick="myMove(); myMove2(); refreshInterval();">Play</button></div>
+		</select><button onclick=" myMove2();">Play</button></div>
 		
 
 	<div id="layer3" style="position: absolute; width: 202px; height: 238px; z-index: 2; left: 790px; top: 61px; color: #FFFFFF">
