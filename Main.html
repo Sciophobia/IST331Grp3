@@ -39,6 +39,9 @@ html, body {
 .auto-style3 {
 	margin-left: 3px;
 }
+.auto-style4 {
+	margin-left: 9px;
+}
 </style>
 </head>
 <style type="">
@@ -233,8 +236,7 @@ html, body {
 	<div id="map" style="width: 642px; height: 439px">
 	</div>
 
-	<img src="FlightTrip.jpg" style=”width:600px; height="97" width="652">
-	<img src="FlightTrip2.jpg" style=”width:600px; height="97" width="652">
+	<img src="FlightTrip.jpg" style=”width:600px; height="97" width="652">&nbsp;
     <script>
         // Add basemap and set properties
         const map = new mapboxgl.Map({
@@ -271,7 +273,7 @@ html, body {
 
 	<form method="post">
 	</form>
-	<div id="layer2" style="position: absolute; width: 180px; height: 80px; z-index: 2; left: 670px; top: 61px; color: #FFFFFF">
+	<div id="layer2" style="position: absolute; width: 202px; height: 80px; z-index: 2; left: 670px; top: 61px; color: #FFFFFF">
 		Animation Controls<select name="Select2" style="width: 184px">
 		<option>Play</option>
 		<option>Stop</option>
@@ -280,17 +282,20 @@ html, body {
 		</select><button onclick=" myMove(); myMove2();">Play</button></div>
 		
 
-	<div id="layer3" style="position: absolute; width: 180px; height: 80px; z-index: 2; left: 850px; top: 61px; color: #FFFFFF">
-		Flight Information<select name="Select3" style="width: 184px">
+	<div id="layer3" style="position: absolute; width: 202px; height: 80px; z-index: 2; left: 790px; top: 61px; color: #FFFFFF">
+		Flight Information<select name="Select3" style="width: 128px">
 		<option>N536SP*</option>
 		<option>AA3049</option>
 		</select></div> 
 		
-	<div id="layer4" style="position: absolute; width: 180px; height: 82px; z-index: 2; left: 1010px; top: 61px; color: #FFFFFF">
-		Scope Location<select name="Select4" style="width: 184px">
+	<div id="layer4" style="position: absolute; width: 202px; height: 82px; z-index: 2; left: 910px; top: 61px; color: #FFFFFF">
+		Scope Location<select name="Select4" style="width: 184px" class="auto-style4">
 		<option>PHL</option>
 		<option>TTN</option>
 		</select></div>
+		
+
+	<p>&nbsp;</p>
 		
 
 </body>
