@@ -24,7 +24,10 @@ function sleep(ms) {
        elem.style.top = pos + "px"; 
        elem.style.left = pos + "px"; ; 
     
+	 sleep(speed).then(() => {
 	  requestAnimationFrame(movediv)
+
+	});
 
 	
 
