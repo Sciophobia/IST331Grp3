@@ -24,7 +24,7 @@ var speed = 1500; //NOTE: Speed (variable shown right above refreshInterval() fu
 			document.getElementById(textDecommand.substr(0,textDecommand.indexOf(' '))).id = oldValues +" "+newHeader;
 			
             
-			
+			 
 
 	}
 
