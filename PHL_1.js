@@ -15,12 +15,14 @@ var speed = 1500; //NOTE: Speed (variable shown right above refreshInterval() fu
         textDecommand = $("#write").val();
             var option = textDecommand.charAt(0);
         	if(option == "A"){
+        
         	textDecommand = textDecommand.substring(2);
 			var newHeader = textDecommand.substring(textDecommand.indexOf(' ')+1);
 			var oldHeader = textDecommand.substring(0,textDecommand.indexOf(' '));
+			var oldInner = document.getElementById(oldHeader).innerHTML;
 			document.getElementById(oldHeader).innerHTML
-                = newHeader;
-			document.getElementById(textDecommand.substr(0,textDecommand.indexOf(' '))).id = newHeader;
+                =  newHeader +" "+ oldInner.substring(oldInner.indexOf(' ')+1);
+			
 			
             
 			 
