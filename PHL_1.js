@@ -11,16 +11,17 @@ var speed = 1500; //NOTE: Speed (variable shown right above refreshInterval() fu
         	textDecommand = document.getElementById("textarea").value;
         }
 
-        function changeHeader() {
+        function changeAltitude() {
         	textDecommand = $("#write").val();
             var option = textDecommand.charAt(0);
         	if(option == "A"){
+			oldvalues =  document.getElementById("textarea").id.substring(0,document.getElementById("textarea").id.indexOf(' '));
         	textDecommand = textDecommand.substring(2);
 			var newHeader = textDecommand.substring(textDecommand.indexOf(' ')+1);
 			var oldHeader = textDecommand.substring(0,textDecommand.indexOf(' '));
 			document.getElementById(oldHeader).innerHTML
                 = newHeader;
-			document.getElementById(textDecommand.substr(0,textDecommand.indexOf(' '))).id = newHeader;
+			document.getElementById(textDecommand.substr(0,textDecommand.indexOf(' '))).id = oldValues +" "+newHeader;
 			
             
 			
