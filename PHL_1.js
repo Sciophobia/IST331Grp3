@@ -26,7 +26,7 @@ var speed = 1500; //NOTE: Speed (variable shown right above refreshInterval() fu
 			
             
 			 
-
+ 
 	}
 
 }
