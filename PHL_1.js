@@ -86,3 +86,20 @@ var id2=null;
   }	
   requestAnimationFrame(movediv)
 }
+
+ function stopAnim(){
+  document.getElementById('animate').style.display='none';
+  document.getElementById('animate2').style.display='none';
+ }
+
+
+ function Timer(){
+  var start = Date.now();
+	setInterval(function() {
+    var delta = Date.now() - start; 
+    output(Math.floor(delta / 1000)); // in seconds
+    // alternatively just show wall clock time:
+    output(new Date().toUTCString());
+}, 1000);
+ }
+
