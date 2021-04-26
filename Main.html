@@ -42,9 +42,13 @@ html, body {
 .auto-style4 {
 	margin-left: 9px;
 }
+.auto-style5 {
+	margin-left: 0;
+}
 </style>
 </head>
 <style type="">
+
 
 
 
@@ -215,12 +219,19 @@ html, body {
 		&nbsp;
 	</p>
 
+<script>
+	
 
+    </script>
+	  <div id="layer5" style="position: absolute; width: 72px; height: 47px; z-index: 3; left: 1156px; top: 152px">
+		  <button onclick="changeHeader();" class="auto-style5" name="Enter" style="width: 69px; height: 35px">
+		  Enter</button></div>
   <div id ="animate" style="font: normal normal normal 100% serif; z-index: 1; left: 50px; top: 76px; width: 11px; height: 12px; text-align: right; color: #00FF00; text-decoration: blink;">
-	  <p class="auto-style3" style="width: 73px">N536SP*</p>
+	  <p id = "N536SP" class="auto-style3" style="width: 73px">N536SP</p>
 	  <p class="auto-style3" style="width: 73px">033 11PF</p>
 	  <p class="auto-style3" style="width: 73px">ACY *B763</p>
-	  <label id="Label1"></label>
+	
+
 	</div>
 	
 	  <div id ="animate2" style="font: normal normal normal 100% serif; z-index: 1; left: 50px; top: 240px; width: 11px; height: 12px; text-align: right; color: #00FF00; text-decoration: blink;">
@@ -228,7 +239,7 @@ html, body {
 	  <p class="auto-style3" style="width: 73px">026 11PF</p>
 	  <p class="auto-style3" style="width: 73px">PHL *B762</p>
 	  
-	  <label id="Label2"></label>
+	  	<label id="Label2"></label>
 	</div>
     
 
@@ -236,7 +247,7 @@ html, body {
 	<div id="map" style="width: 642px; height: 439px">
 	</div>
 
-	<img src="FlightTrip.jpg" style=”width:600px; height="97" width="652">&nbsp;
+	<img height="97" src="FlightTrip.jpg" style="”width:600px;" width="652" />&nbsp;
     <script>
         // Add basemap and set properties
         const map = new mapboxgl.Map({

@@ -3,8 +3,32 @@ var script = document.createElement('script');
 script.src = 'https://code.jquery.com/jquery-3.4.1.min.js';
 script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
-var speed = 1500;
-//NOTE: Speed (variable shown right above refreshInterval() function modifies the speed of the animation)
+var speed = 1500; //NOTE: Speed (variable shown right above refreshInterval() function modifies the speed of the animation)
+		
+		var text = null;
+		var textDecommand = "";
+        function processchange() {
+        	textDecommand = document.getElementById("textarea").value;
+        }
+
+        function changeHeader() {
+        	textDecommand = $("#write").val();
+            var option = textDecommand.charAt(0);
+        	if(option == "H"){
+        	textDecommand = textDecommand.substring(2);
+			var newHeader = textDecommand.substring(textDecommand.indexOf(' ')+1);
+			var oldHeader = textDecommand.substring(0,textDecommand.indexOf(' '));
+			document.getElementById(oldHeader).innerHTML
+                = newHeader;
+			document.getElementById(textDecommand.substr(0,textDecommand.indexOf(' '))).id = newHeader;
+			
+            
+			
+
+	}
+
+}
+
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
