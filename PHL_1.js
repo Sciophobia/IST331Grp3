@@ -86,6 +86,3 @@ var id2=null;
   }	
   requestAnimationFrame(movediv)
 }
-
- 
-
