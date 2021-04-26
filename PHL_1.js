@@ -14,7 +14,7 @@ var speed = 1500; //NOTE: Speed (variable shown right above refreshInterval() fu
         function changeHeader() {
         	textDecommand = $("#write").val();
             var option = textDecommand.charAt(0);
-        	if(option == "H"){
+        	if(option == "A"){
         	textDecommand = textDecommand.substring(2);
 			var newHeader = textDecommand.substring(textDecommand.indexOf(' ')+1);
 			var oldHeader = textDecommand.substring(0,textDecommand.indexOf(' '));
